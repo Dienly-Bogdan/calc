@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+    function save_digit(digit){
+        let number_input = document.querySelector(".number_input");
+        number_input.innerText = number_input.innerText * 10 + digit;
+    }
+
+    function clear_input(){
+        let number_input = document.querySelector(".number_input");
+        number_input.innerText = "";
+    }
+
+    function delete_last_digit(){
+        let number_input = document.querySelector(".number_input");
+        number_input.innerText = Math.floor(number_input.innerText / 10);
+    }
+    </script>
+
+    <div class="buttons">
+
+        <div class="buttons_row">
+            <div class="number_input"></div>
+            <div class="calc_btn" onclick="delete_last_digit()"><</div>    
+        </div>  
+
+        <div class="buttons_row">
+            <div class="calc_btn">+</div>   
+            <div class="calc_btn">-</div>   
+            <div class="calc_btn">*</div>  
+            <div class="calc_btn">/</div>   
+        </div>  
+
+        <div class="buttons_row">
+            <div class="calc_btn" onclick="save_digit(1)">1</div>   
+            <div class="calc_btn" onclick="save_digit(2)">2</div>   
+            <div class="calc_btn" onclick="save_digit(3)">3</div>  
+            <div class="calc_btn" onclick="clear_input()">С</div>   
+        </div>  
+
+        <div class="buttons_row">
+            <div class="calc_btn" onclick="save_digit(5)">4</div>   
+            <div class="calc_btn" onclick="save_digit(6)">5</div>   
+            <div class="calc_btn" onclick="save_digit(7)">6</div> 
+            <div class="calc_btn">=</div>    
+        </div>  
+
+        <div class="buttons_row">
+            <div class="calc_btn" onclick="save_digit(7)">7</div>   
+            <div class="calc_btn" onclick="save_digit(8)">8</div>   
+            <div class="calc_btn" onclick="save_digit(9)">9</div>  
+            <div class="calc_btn" onclick="save_digit(0)">0</div>  
+        </div>  
+    </div>
+</body>
+</html>
