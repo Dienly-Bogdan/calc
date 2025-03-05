@@ -51,19 +51,20 @@ function division(){
 function equal(){
     let second_number = get_number();
 
+    let result;
     if (operation == '+'){
-        let result = first_number + second_number;
+        result = first_number + second_number;
     }
     else if (operation == "-"){
-        let result = first_number - second_number;
+        result = first_number - second_number;
     }
 
     else if (operation == "*"){
-        let result = first_number * second_number;
+        result = first_number * second_number;
     }
 
     else if (operation == "/"){
-        let result = first_number / second_number;
+        result = first_number / second_number;
     }
 
     let number_input = document.querySelector(".number_input");
