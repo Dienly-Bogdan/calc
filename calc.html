@@ -7,21 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-    function save_digit(digit){
-        let number_input = document.querySelector(".number_input");
-        number_input.innerText = number_input.innerText * 10 + digit;
-    }
-
-    function clear_input(){
-        let number_input = document.querySelector(".number_input");
-        number_input.innerText = "";
-    }
-
-    function delete_last_digit(){
-        let number_input = document.querySelector(".number_input");
-        number_input.innerText = Math.floor(number_input.innerText / 10);
-    }
+    <script src="calc.js">
     </script>
 
     <div class="buttons">
@@ -32,10 +18,10 @@
         </div>  
 
         <div class="buttons_row">
-            <div class="calc_btn">+</div>   
-            <div class="calc_btn">-</div>   
-            <div class="calc_btn">*</div>  
-            <div class="calc_btn">/</div>   
+            <div class="calc_btn" onclick="plus()">+</div>   
+            <div class="calc_btn" onclick="minus()">-</div>   
+            <div class="calc_btn" onclick="multiply()">*</div>  
+            <div class="calc_btn" onclick="division()">/</div>   
         </div>  
 
         <div class="buttons_row">
@@ -46,10 +32,10 @@
         </div>  
 
         <div class="buttons_row">
-            <div class="calc_btn" onclick="save_digit(5)">4</div>   
-            <div class="calc_btn" onclick="save_digit(6)">5</div>   
-            <div class="calc_btn" onclick="save_digit(7)">6</div> 
-            <div class="calc_btn">=</div>    
+            <div class="calc_btn" onclick="save_digit(4)">4</div>   
+            <div class="calc_btn" onclick="save_digit(5)">5</div>   
+            <div class="calc_btn" onclick="save_digit(6)">6</div> 
+            <div class="calc_btn" onclick="equal()">=</div>    
         </div>  
 
         <div class="buttons_row">
